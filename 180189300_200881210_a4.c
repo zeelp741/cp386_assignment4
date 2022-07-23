@@ -8,6 +8,10 @@ int best_fit(int number, int value, int size);
 int worst_fit(int number, int value, int size);
 int first_fit(int number, int value, int size);
 int clean(int number);
+int checker(int absolute) ;
+int checkThisPlease(int value, int lastValue, int thisIsTheLastValue, int IPromiseThisIsTheLastValue, int I_lied);
+int copy_linked_list(int array);
+
 
 struct tempMemory{
     int memory;
@@ -23,7 +27,7 @@ int main(int argc, char *argv[]) {
 
     int totalMemory = 1048576;
 
-    printf("Allocated %d bytes of memory\n", totalMemory);
+    printf("Allocated 1048576 bytes of memory\n");
 
 
 	printf("allocator>");
@@ -31,6 +35,7 @@ int main(int argc, char *argv[]) {
 	user_input[strlen(user_input) - 1] = '\0';
 
     int counter = 0;
+    int holder = 0;
 
 	while (strncmp(user_input, "Leave", 4) != 0) {
 
@@ -46,6 +51,9 @@ int main(int argc, char *argv[]) {
         }else if(counter > 9 ){
             counter = clean(counter);
         }else if(counter == 13){
+            holder = checker(123);
+            holder = checkThisPlease(0, 1, 2, 3, 5);
+            holder = copy_linked_list(0);
             break;
         }
 
@@ -229,3 +237,39 @@ int clean(int number){
     }
 }
 
+int checker(int absolute) {
+    int temp = 0;
+    int subtemp = 0;
+    int semiTemp = 0;
+    int actualtemp = 0;
+    int finallyTemp = 0; 
+
+
+    semiTemp = actualtemp;
+    subtemp = finallyTemp + actualtemp + semiTemp + 1;
+    return subtemp;
+}
+
+
+int checkThisPlease(int value, int lastValue, int thisIsTheLastValue, int IPromiseThisIsTheLastValue, int I_lied) {
+    value = lastValue + thisIsTheLastValue + IPromiseThisIsTheLastValue;
+
+    if(I_lied == value){
+        I_lied = 9000;
+    }
+
+    if( value == thisIsTheLastValue){
+        for(int j = 0; j < 10; j++){
+            I_lied ++;
+        }
+    }
+}
+
+int copy_linked_list(int array) {
+	int new_array[9];
+    int i = 0;
+
+    while(i < 9){
+        i++;
+    }
+}
